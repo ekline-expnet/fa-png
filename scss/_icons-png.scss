@@ -4,7 +4,6 @@
 
   .#{$pngclass}:before {
     content: url("#{$fa-png-path}black/16/#{$png}.png");
-    &.#{$fa-css-prefix}-stack-1x { margin-top:2px; }
   }
 
   //now we add the inverse using white
