@@ -1,0 +1,23 @@
+{
+  "name": "fa-png",
+  "version": "1.0.0",
+  "description": "Project that contains a custom build of font-awesome that uses pngs instead of a web-font",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekline-expnet/fa-png.git"
+  },
+  "author": "Edward Kline",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ekline-expnet/fa-png/issues"
+  },
+  "homepage": "https://github.com/ekline-expnet/fa-png#readme",
+  "dependencies": {
+    "font-awesome": "^4.6.3",
+    "icon-font-to-png": "github:ekline-expnet/icon-font-to-png#expression"
+  }
+}

@@ -1,0 +1,36 @@
+@each $png in $fa-png-var-list {
+  //default icons are black
+  $pngclass: "#{$fa-css-prefix}-#{$png}";
+
+  .#{$pngclass}:before {
+    content: url("#{$fa-png-path}black/16/#{$png}.png");
+    &.#{$fa-css-prefix}-stack-1x { margin-top:2px; }
+  }
+
+  //now we add the inverse using white
+  .fa-inverse {
+    &.#{$pngclass}:before{
+      content: url("#{$fa-png-path}white/16/#{$png}.png");
+    }
+  }
+
+  @each $size in $fa-png-sizes {
+	  $sclass: "#{$fa-css-prefix}-"+nth($size,1);
+
+	  .#{$sclass} {
+	    &.#{$pngclass}:before{
+	      content: url("#{$fa-png-path}black/16/#{$png}.png");
+	    }
+	  }
+    //now we add the inverse using white
+    .fa-inverse{
+      &.#{$sclass} {
+        &.#{$pngclass}:before{
+          content: url("#{$fa-png-path}white/"+nth($size,2)+"/#{$png}.png");
+        }
+      }
+    }
+	}
+
+
+}
