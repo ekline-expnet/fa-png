@@ -15,15 +15,16 @@
 
   @each $size in $fa-png-sizes {
 	  $sclass: "#{$fa-css-prefix}-"+nth($size,1);
+    $stackClass: "#{$fa-css-prefix}-stack-"+nth($size,1);
 
-	  .#{$sclass} {
+	  .#{$sclass}, .#{$stackClass} {
 	    &.#{$pngclass}:before{
-	      content: url("#{$fa-png-path}black/16/#{$png}.png");
+	      content: url("#{$fa-png-path}black/"+nth($size,2)+"/#{$png}.png");
 	    }
 	  }
     //now we add the inverse using white
-    .fa-inverse{
-      &.#{$sclass} {
+    .fa-inverse {
+      &.#{$sclass}, &.#{$stackClass} {
         &.#{$pngclass}:before{
           content: url("#{$fa-png-path}white/"+nth($size,2)+"/#{$png}.png");
         }
